@@ -7,6 +7,8 @@
 {% block content %}
 	{% include "header.html" %}
 	<article>
+		
+	<script src="/theme/js/sortable.min.js"></script>
 		<h1 id="title">
 			<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
 				title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>

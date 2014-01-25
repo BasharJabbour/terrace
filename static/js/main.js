@@ -1,9 +1,9 @@
 $(document).ready(function() {
-    $("table").attr('data-sortable', 't');
-    $("table").attr('class', "sortable-theme-minimal");
-    Sortable.init();
-
-
+    if ($("article").size()) {
+        $("table").attr('data-sortable', 't');
+        $("table").attr('class', "sortable-theme-minimal");
+        Sortable.init();
+    }
 });
 
 $(window).on('scroll', function() {

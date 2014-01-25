@@ -15,6 +15,7 @@ body {
 #posts {
     float: left;
     padding-bottom: 3em;
+    width: 60%;
 }
 
 a {
@@ -39,10 +40,6 @@ a:hover, .subscribe input[type="submit"]:hover {
 .posts {
     list-style-type: none;
     padding-left: 0;
-}
-
-#posts {
-    width: 60%;
 }
 
 .posts .title {
@@ -83,6 +80,11 @@ pre {
     font-size: .8em;
     line-height: 1.5em;
     border: 1px #ccc solid;
+    font-family: 'Inconsolata';
+}
+
+code {
+    font-family: 'Inconsolata';
 }
 
 article h1#title, .posts h1 {
@@ -155,4 +157,21 @@ blockquote {
 
 #___plusone_0 {
     margin-top: 20px !important;
+}
+
+@media screen and (max-width: 640px) {
+    #sidebar {
+        width: 100%;
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    #posts {
+        width: 100%;
+    }
+
+    #tweetthis {
+        width: 100%;
+        position: relative;
+    }
 }
