@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+	{% include "header.html" %}
+
+	<dl>
+		<ol class="posts">
+			{% for article in articles_page.object_list %}
+				<li>
+					<h5 class="published" title="{{ article.date.isoformat() }}">{{ article.locale_date }}</h5>
+					<h1 class="title">
+						<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title }}">{{ article.title }}</a>
+					</h1>
+					<div id="article_meta">
+						{% if article.tags %}<i>Tags:</i> 
+							{% for tag in article.tags %}
+								<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+								{% if not loop.last %}
+									·
+								{% endif %}
+							{% endfor %}
+						{% endif %}
+					</div>
+				<!--<div class="entry-content"> {{ article.summary }} </div>-->
+				</li>
+			{% endfor %}
+		</ol>
+	</dl>
+
+	{% include 'pagination.html' %}
+{% endblock content %}

@@ -1,0 +1,158 @@
+body {
+    font-family: 'Avenir', 'Open Sans';
+    padding: 3em;
+    font-size: 18px;
+    background-color: #fafaf5;
+    position: relative;
+}
+
+#sidebar {
+    float: left;
+    width: 10%;
+    padding-right: 10%;
+}
+
+#posts {
+    float: left;
+    padding-bottom: 3em;
+}
+
+a {
+    color: #f15b29;
+    text-decoration: none;
+}
+
+a:hover, .subscribe input[type="submit"]:hover {
+    color: #f15b29;
+    border-bottom: 2px #f15b29 solid;
+}
+
+.title a, #title a, #sidebar a, .posts #article_meta a {
+    color: inherit;
+}
+
+.title a:hover, #title a:hover, #sidebar a:hover, .posts #article_meta a:hover {
+    color: #f15b29;
+    border-bottom: none;
+}
+
+.posts {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#posts {
+    width: 60%;
+}
+
+.posts .title {
+    font-size: 1.17em;
+}
+
+img {
+    width: 120%;
+    margin-left: -10%;
+}
+
+header h5, .posts .published {
+    margin-bottom: 0;
+}
+
+article h1, .posts .title {
+    margin-top: 0;
+}
+
+.user_meta ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 0.9em;
+}
+
+.social li {
+    font-size: 0.8em;
+}
+
+footer {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+pre {
+    background-color: #fff;
+    padding: 1em;
+    font-size: .8em;
+    line-height: 1.5em;
+    border: 1px #ccc solid;
+}
+
+article h1#title, .posts h1 {
+    margin-bottom: 0;
+}
+
+#article_meta {
+    font-size: 0.9em;
+}
+
+#user {
+    line-height: 1.1em;
+}
+
+pre {
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+#tweetthis {
+    position: fixed;
+    right: 1.5em;
+    top: 3em;
+    width: 15%;
+    text-align: center;
+    margin: 1em;
+    background-color: #fafaf5;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.tweet, .follow, .subscribe {
+    padding: 1em;
+}
+
+.follow {
+    border-top: 1px #ccc solid;
+    border-bottom: 1px #ccc solid;
+}
+
+.subscribe input[type="submit"] {
+    color: #f15b29;
+    border: 0;
+    background-color: #fafaf9;
+    font: inherit;
+    cursor: hand;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    text-align: center;
+}
+
+#tweetthis:hover {
+    opacity: 1 !important;
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 1.1em;
+    width: 120%;
+    margin-left: -10%;
+}
+
+#___plusone_0 {
+    margin-top: 20px !important;
+}
