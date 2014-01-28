@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    if ($("article").size()) {
+    if ($("article").size() && !$("table").attr("class")) {
         $("table").attr('data-sortable', 't');
         $("table").attr('class', "sortable-theme-minimal");
         Sortable.init();

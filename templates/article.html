@@ -49,39 +49,6 @@
 		<a href="{{ SITEURL }}/" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
 	</footer>
 
-	<div id="tweetthis">
-		<div class='tweet'>
-		<b>Like the post?  Share it!</b><br /><br />
-		<!--<a href="https://twitter.com/share?via=justinmduke&text={{article.title}}&url={{ SITEURL }}/{{article.url}}" class="twitter-share-button" data-related="jasoncosta" data-lang="en" data-size="large" data-count="none" target="_blank">Tweet</a>-->
-		<a href="https://twitter.com/share?count=vertical" class="twitter-share-button" data-lang="en">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=389867964446737";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<!-- Place this tag where you want the +1 button to render. -->
-<div class="g-plusone" data-size="tall"></div>
-
-<!-- Place this tag after the last +1 button tag. -->
-<script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/platform.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
-</div>
-	<div class='follow'>
-<a href="https://twitter.com/justinmduke" class="twitter-follow" data-show-count="false" data-lang="en" data-size="large" target="_blank">Follow me on Twitter.</a>
-	</div>
-	<div class='subscribe'>
-		<b>Subscribe to my mailing list</b>
-		 <form action="https://tinyletter.com/jmduke" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/jmduke', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><p><input type="text" style="width:140px" name="email" id="tlemail" /></p><input type="hidden" value="1" name="embed"/><input type="submit" value="Subscribe" /><p></form>
-	</div>
-
+	{% include "sidebar.html" %}
 
 {% endblock %}

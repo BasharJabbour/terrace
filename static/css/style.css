@@ -1,5 +1,5 @@
 body {
-    font-family: 'Avenir', 'Open Sans';
+    font-family: 'Avenir', 'Lora';
     padding: 3em;
     font-size: 18px;
     background-color: #fafaf5;
@@ -81,6 +81,11 @@ pre {
     line-height: 1.5em;
     border: 1px #ccc solid;
     font-family: 'Inconsolata';
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
 code {
@@ -99,15 +104,7 @@ article h1#title, .posts h1 {
     line-height: 1.1em;
 }
 
-pre {
- white-space: pre-wrap;       /* css-3 */
- white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
- white-space: -pre-wrap;      /* Opera 4-6 */
- white-space: -o-pre-wrap;    /* Opera 7 */
- word-wrap: break-word;       /* Internet Explorer 5.5+ */
-}
-
-#tweetthis {
+#rightbar {
     position: fixed;
     right: 1.5em;
     top: 3em;
@@ -121,6 +118,10 @@ pre {
 
 .tweet, .follow, .subscribe {
     padding: 1em;
+}
+
+.tweet #___plusone_0 {
+    width: 100% !important;
 }
 
 .follow {
@@ -144,7 +145,7 @@ td {
     text-align: center;
 }
 
-#tweetthis:hover {
+#rightbar:hover {
     opacity: 1 !important;
 }
 
@@ -170,7 +171,7 @@ blockquote {
         width: 100%;
     }
 
-    #tweetthis {
+    #rightbar {
         width: 100%;
         position: relative;
     }

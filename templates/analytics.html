@@ -9,3 +9,7 @@
 			pageTracker._trackPageview();
 		} catch(err) {}</script>
 {% endif %}
+
+{% if GOOGLE_WEBMASTER_TOOLS %}
+    <meta name="google-site-verification" content="{{ GOOGLE_WEBMASTER_TOOLS }}" />
+{% endif %}
