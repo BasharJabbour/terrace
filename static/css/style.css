@@ -176,3 +176,13 @@ blockquote {
         position: relative;
     }
 }
+
+#st-search-input {
+    padding: 1em;
+    padding-left: 2em;
+    width: 100%;
+}
+
+.st-input-powered-by, .st-powered-by {
+    display: none !important;
+}
