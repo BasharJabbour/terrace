@@ -12,5 +12,5 @@ $(document).ready(function() {
 
 $(window).on('scroll', function() {
    var st = $(window).scrollTop();
-   $('#tweetthis').css({ 'opacity' : (st/(0.8 * $(window).height())) });
+   $('#rightbar').css({ 'opacity' : (st/(0.8 * $(window).height())) });
 });
