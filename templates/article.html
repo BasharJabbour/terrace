@@ -1,5 +1,24 @@
 {% extends "base.html" %}
 
+{% block head %}
+	<!-- META TAGS. -->
+	<!-- for Google -->
+	<meta name="description" content="{{ DESCRIPTION }}" />
+	<meta name="keywords" content="{% for tag in article.tags %}{{ tag }},{% endfor %}" />
+	<meta name="author" content="{{ AUTHOR }}" />
+
+	<!-- for Facebook -->          
+	<meta property="og:title" content="{{ article.title }}" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
+	<meta property="og:description" content="{{ article.description }}" />
+
+	<!-- for Twitter -->          
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="{{ AUTHOR }}" />
+	<meta name="twitter:description" content="{{ article.description }}" />
+{% endblock %}
+
 {% block title %}
 	{{ article.title }}
 {% endblock %}
