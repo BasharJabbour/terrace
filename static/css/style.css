@@ -94,6 +94,7 @@ code {
 
 article h1#title, .posts h1 {
     margin-bottom: 0;
+    font-size: 1.5em;
 }
 
 #article_meta {
@@ -116,12 +117,15 @@ article h1#title, .posts h1 {
     transition: 0.5s;
 }
 
-.tweet, .follow, .subscribe {
-    padding: 1em;
+.subscribe {
+    width: 100%;
+    float: left;
+    margin-top: 1em;
 }
 
 .tweet #___plusone_0 {
-    width: 100% !important;
+    width: 60px !important;
+    float: left !important;
 }
 
 .follow {
@@ -154,10 +158,6 @@ blockquote {
     font-size: 1.1em;
     width: 120%;
     margin-left: -10%;
-}
-
-#___plusone_0 {
-    margin-top: 20px !important;
 }
 
 @media screen and (max-width: 640px) {

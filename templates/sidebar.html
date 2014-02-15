@@ -1,5 +1,11 @@
 <div id="rightbar">
 
+    {% if TWITTER %}
+        <div class='follow'>
+            <a href="https://twitter.com/{{ TWITTER }}" class="twitter-follow" data-show-count="false" data-lang="en" data-size="large" target="_blank">Follow me on Twitter.</a>
+        </div>
+    {% endif %}
+    
     <div class='tweet'>
         <b>Like the post?  Share it!</b><br /><br />
         <a href="https://twitter.com/share?count=vertical" class="twitter-share-button" data-lang="en">Tweet</a>
@@ -17,12 +23,6 @@
         })();
         </script>
     </div>
-
-    {% if TWITTER %}
-        <div class='follow'>
-            <a href="https://twitter.com/{{ TWITTER }}" class="twitter-follow" data-show-count="false" data-lang="en" data-size="large" target="_blank">Follow me on Twitter.</a>
-        </div>
-    {% endif %}
 
     {% if TINYLETTER %}
         <div class='subscribe'>

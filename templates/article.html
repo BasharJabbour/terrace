@@ -17,6 +17,7 @@
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:title" content="{{ AUTHOR }}" />
 	<meta name="twitter:description" content="{{ article.description }}" />
+	<meta name="twitter:creator" content="@{{ TWITTER }}">
 {% endblock %}
 
 {% block title %}
@@ -46,30 +47,58 @@
 
 		{{ article.content }}
 
+	<div>
+
+	    <div class='tweet'>
+	        <b>You should <a href="https://twitter.com/{{ TWITTER }}" class="twitter-follow" data-show-count="false" data-lang="en" data-size="large" target="_blank">follow me on Twitter</a></b>.<br /><br />
+	        <a href="https://twitter.com/share?count=vertical" class="twitter-share-button" data-lang="en">Tweet</a>
+	        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+	        <!-- Place this tag where you want the +1 button to render. -->
+	        <div class="g-plusone" data-size="tall"></div>
+
+	        <!-- Place this tag after the last +1 button tag. -->
+	        <script type="text/javascript">
+	        (function() {
+	        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	        po.src = 'https://apis.google.com/js/platform.js';
+	        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	        })();
+	        </script>
+	    </div>
+
+	    {% if false and TINYLETTER %}
+	        <div class='subscribe'>
+	            <b>Subscribe to my mailing list</b>
+	            <form action="https://tinyletter.com/{{ TINYLETTER }}" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/{{ TINYLETTER }}', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><p><input type="text" style="width:140px" name="email" id="tlemail" /></p><input type="hidden" value="1" name="embed"/><input type="submit" value="Subscribe" /><p></form>
+	        </div>
+	    {% endif %}
+
+	</div>
+
+
 
 	{% if DISQUS_SITENAME %}
-	<div id="comments">
-		<h3>Comments</h3>
-		<div id="disqus_thread"></div>
-		<script type="text/javascript">
-			var disqus_identifier = "{{ article.url }}";
-			(function() {
-				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-				dsq.src = 'http://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
-				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-			})();
+		<div id="comments">
+			<h3>Comments</h3>
+			<div id="disqus_thread"></div>
+			<script type="text/javascript">
+				var disqus_identifier = "{{ article.url }}";
+				(function() {
+					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					dsq.src = 'http://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
+					(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+				})();
 
-		    $.bigfoot();    
-		</script>
-		<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
-	</div>
+			    $.bigfoot();    
+			</script>
+			<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
+		</div>
 	{% endif %}
 	</article>
 
 	<footer>
 		<a href="{{ SITEURL }}/" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
 	</footer>
-
-	{% include "sidebar.html" %}
 
 {% endblock %}
