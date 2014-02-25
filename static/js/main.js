@@ -8,9 +8,20 @@ $(document).ready(function() {
     $('#st-results-container').bind('DOMNodeInserted DOMSubtreeModified DOMNodeRemoved', function(event) {
         $(".internalcontent").hide();
     });
+
+    if ($("pre").length > 0) {
+        $("pre").hide();
+        $('#article_meta').after("<div class='code'>(Hiding code.  Click to show.)</div>");
+        $('.tweet').before("<div class='code'>(Hiding code.  Click to show.)</div>");
+    }
+    $('.code').click(function() {
+        $('pre').toggle();
+        $('.code').html($('.code').html() == "(Hiding code.  Click to show.)" ? "(Showing code.  Click to hide.)" : "(Hiding code.  Click to show.)");
+    });
 });
 
 $(window).on('scroll', function() {
    var st = $(window).scrollTop();
    $('#rightbar').css({ 'opacity' : (st/(0.8 * $(window).height())) });
 });
+

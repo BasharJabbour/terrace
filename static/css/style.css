@@ -187,3 +187,26 @@ blockquote {
 .st-input-powered-by, .st-powered-by {
     display: none !important;
 }
+
+.vis {
+    margin-left: -10%;
+}
+
+.code {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: #f15b29;
+    color: #fafaf5;
+    padding: 10px;
+    float: left;
+    clear: both;
+    width: 50%;
+    margin-right: 50%;
+    text-align: center;
+    opacity: 0.5;
+}
+
+.code:hover {
+    opacity: 1;
+    cursor: hand;
+}
