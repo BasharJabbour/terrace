@@ -29,6 +29,17 @@
 	<article>
 		
 		<script src="/theme/js/sortable.min.js"></script>
+		
+		{% if article.hidecode %}
+			<script type='text/javascript'>
+				$(document).ready(function() {
+					$("pre").hide();
+					 $('.code').html($('.code').html() == "(Hiding code.  Click to show.)" ? "(Showing code.  Click to hide.)" : "(Hiding code.  Click to show.)");
+
+				});
+			</script>
+		{% endif %}
+
 		<h1 id="title">
 			<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
 				title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>

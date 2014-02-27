@@ -10,9 +10,8 @@ $(document).ready(function() {
     });
 
     if ($("pre").length > 0) {
-        $("pre").hide();
-        $('#article_meta').after("<div class='code'>(Hiding code.  Click to show.)</div>");
-        $('.tweet').before("<div class='code'>(Hiding code.  Click to show.)</div>");
+        $('#article_meta').after("<div class='code'>(Showing code.  Click to hide.)</div>");
+        $('.tweet').before("<div class='code'>(Showing code.  Click to hide.)</div>");
     }
     $('.code').click(function() {
         $('pre').toggle();
