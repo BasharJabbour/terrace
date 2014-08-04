@@ -9,7 +9,7 @@ body {
 
 #sidebar {
     float: left;
-    width: 10%;
+    width: 120px;
     padding-right: 10%;
     text-align: center;
 }
@@ -55,6 +55,10 @@ img {
 
 header h5, .posts .published {
     margin-bottom: 0;
+}
+
+#posts li {
+    margin-bottom: 1em;
 }
 
 article h1, .posts .title {
@@ -219,4 +223,60 @@ blockquote {
 .code:hover {
     opacity: 1;
     cursor: hand;
+}
+
+.sublist-panel .s-article button {
+    background-color: #f15b29 !important;
+}
+
+.sublist-panel * {
+    font-family: Avenir !important;
+}
+
+#lifestream h2 {
+    text-align: center;
+}
+
+#lifestream {
+  border-radius: 7px;
+  color: #2B2B2B;
+  width: 15%;
+  float: left;
+  font-size:11px;
+  text-align: right;
+  padding-left: 3em;
+  opacity: 0.3;
+}
+
+#lifestream:hover {
+    opacity: 1;
+}
+
+#lifestream a {
+  color: #2B2B2B;
+  text-decoration: none;
+}
+#lifestream a:hover {
+  color: #2B2B2B;
+  border-bottom-width: 1px;
+}
+#lifestream ul {
+  padding: 10px;
+  padding-top: 0px;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+#lifestream li {
+  padding: 10px 0px 10px 25px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  border-bottom: 1px #2B2B2B dotted;
+  box-sizing: border-box;
+}
+#lifestream li:hover {
+  color: #2B2B2B;
+}
+#lifestream .timeago {
+  opacity: .5;
 }
