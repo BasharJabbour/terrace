@@ -18,6 +18,21 @@
 	<meta name="twitter:title" content="{{ AUTHOR }}" />
 	<meta name="twitter:description" content="{{ article.description }}" />
 	<meta name="twitter:creator" content="@{{ TWITTER }}">
+
+	<!-- for SubList -->
+	<script>
+	  (function(s,u,b,hh,uu,bb){
+	    uu=document.createElement(u);
+	    uu.setAttribute('data-sublist',hh);
+	    uu.setAttribute('data-panel',true);
+	    uu.async=1;uu.src=b;
+	    bb=s.getElementsByTagName(u)[0];
+	    bb.parentNode.insertBefore(uu,bb);
+	  })(document, 'script',
+	    'https://assets.sublist.io/v1/sublist.js',
+	    '7a4e8b93-1820-4f0e-a98d-1030d4679c19');
+	</script>
+
 {% endblock %}
 
 {% block title %}
@@ -61,7 +76,7 @@
 	<div>
 
 	    <div class='tweet'>
-	        <b>You should <a href="https://twitter.com/{{ TWITTER }}" class="twitter-follow" data-show-count="false" data-lang="en" data-size="large" target="_blank">follow me on Twitter</a>.  And <a href="/subscribe">subscribe to my newsletter.</a></b>
+	        <b>You should <a href="https://twitter.com/{{ TWITTER }}" class="twitter-follow" data-show-count="false" data-lang="en" data-size="large" target="_blank">follow me on Twitter</a>.</b>
 
 	        <br /><br />
 

@@ -34,6 +34,11 @@
 		<script src="/theme/js/jquery.swiftype.search.js"></script>
 	{% endif %}
 
+	<!-- LIFESTREAM. -->
+	<link href="/theme/css/lifestream.css" rel="stylesheet" type="text/css">
+	<script src="/theme/js/jquery.lifestream.js" type="text/javascript" charset="utf-8"></script>
+ 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.1.0/jquery.timeago.min.js" type="text/javascript" charset="utf-8"></script>
+
 	{% block head %}
 	{% endblock head %}
 
@@ -86,6 +91,7 @@
 				  }());
 				</script>
 			{% endif %}
+
 		</div>
 	</section>
 
@@ -95,6 +101,9 @@
 		{% endblock %}
 	</div>
 	</section>
+
+
+  	<div id="lifestream"><h2>Recent Shenanigans</h2><div></div></div>
 
 	{% include 'analytics.html' %}
 </body>
