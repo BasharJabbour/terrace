@@ -280,3 +280,18 @@ blockquote {
 #lifestream .timeago {
   opacity: .5;
 }
+
+
+@media screen and (max-width: 1144px) {
+    #lifestream {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #lifestream {
+        display: block;
+        width: 100%;
+        padding-left: 0;
+    }
+}
