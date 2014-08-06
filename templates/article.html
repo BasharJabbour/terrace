@@ -63,6 +63,14 @@
 	    <div class='tweet'>
 	        <b>You should <a href="https://twitter.com/{{ TWITTER }}" class="twitter-follow" data-show-count="false" data-lang="en" data-size="large" target="_blank">follow me on Twitter</a>.</b>
 
+	    {% if TINYLETTER %}
+	        <div class='subscribe'>
+	            <b>Liked this?  Put in your email for weekly updates from yours truly:</b>
+	            <form action="https://tinyletter.com/{{ TINYLETTER }}" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/{{ TINYLETTER }}', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><p><input type="text" name="email" id="tlemail" /></p><input type="hidden" value="1" name="embed"/><input type="submit" value="Subscribe" /><p></form>
+	        </div>
+    	{% endif %}
+
+
 	        <br /><br />
 
 	        <a href="https://twitter.com/share?count=vertical" class="twitter-share-button" data-lang="en">Tweet</a>

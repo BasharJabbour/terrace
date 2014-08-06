@@ -25,7 +25,7 @@ a {
     text-decoration: none;
 }
 
-a:hover, .subscribe input[type="submit"]:hover {
+a:hover {
     color: #f15b29;
     border-bottom: 2px #f15b29 solid;
 }
@@ -132,9 +132,15 @@ article h1#title, .posts h1 {
 }
 
 .subscribe {
-    width: 100%;
+    width: 80%;
     float: left;
     margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 20%;
+    padding: 1em;
+    background-color: #222;
+    color: #fff;
+    padding-bottom: 0em;
 }
 
 .tweet #___plusone_0 {
@@ -147,12 +153,26 @@ article h1#title, .posts h1 {
     border-bottom: 1px #ccc solid;
 }
 
+.subscribe input[type="text"] {
+    padding: 0.5em;
+    width: 80%;
+    font-family: "Avenir", "Lora";
+    font-size: 16px;
+}
+
+.subscribe form {
+    margin-bottom: 0em;
+}
+
 .subscribe input[type="submit"] {
-    color: #f15b29;
+    color: #fff;
     border: 0;
-    background-color: #fbfbfb;
+    background-color: #f15b29;
     font: inherit;
     cursor: hand;
+    padding: 0.5em;
+    font-family: "Avenir", "Lora";
+    font-weight: bold;
 }
 
 table {
